@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="200">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2027">
+        <animate attributeName="stop-color" values="#0f2027;#203a43;#2c5364;#0f2027" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#2c5364">
+        <animate attributeName="stop-color" values="#2c5364;#0f2027;#203a43;#2c5364" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#grad)" rx="12"/>
+  
+  <!-- Linha animada de tendência -->
+  <path d="M 50 150 Q 150 50 250 120 T 450 80 T 650 130 T 750 60" fill="transparent" stroke="#00e5ff" stroke-width="3" stroke-dasharray="1000" stroke-dashoffset="1000">
+    <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="3s" fill="freeze" />
+  </path>
+  
+  <!-- Textos -->
+  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="36" font-weight="bold" letter-spacing="2">EQUIPE VERODATA</text>
+  <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" fill="#a0e0e0" font-family="Arial, sans-serif" font-size="16" font-weight="normal">CIRS DataQuest • American Statistical Association</text>
+</svg>
