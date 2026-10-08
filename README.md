@@ -51,7 +51,6 @@ Dataquest-VeroData/
 <br>
 
 ## 👨‍💻 Equipe
-* Adicione os links para o GitHub dos seus colegas aqui.
-* **[Caio Lima / @CAIO-LIMA-37]**
+* **[Caio Lima/@CAIO-LIMA-37]**
 * **[Pedro Henrique]**
 * **[Rodrigo Graim]**
