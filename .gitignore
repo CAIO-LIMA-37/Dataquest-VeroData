@@ -1,0 +1,12 @@
+.venv/
+DataQuest/
+env/
+*.zip
+scripts/
+specs/
+new_data/
+original_data/
+.mplconfig/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

@@ -19,16 +19,34 @@ Nosso objetivo é aplicar técnicas de análise de séries temporais, inferênci
 
 ## 📂 Estrutura do Repositório
 
-
 ```text
 Dataquest-VeroData/
-├── assets/             # Elementos visuais (SVG, ícones, imagens)
-├── data/               # Datasets rastreados via Git LFS
-│   ├── WPP2024_Demographic_Indicators_Medium.csv
-│   └── WPP2024_Demographic_Indicators_OtherVariants.csv
-├── docs/               # Documentação e relatórios em Word/PDF
-└── README.md           # Visão geral do projeto
+├── assets/                     # Elementos visuais institucionais (SVG, badges)
+├── data/                       # Datasets oficiais WPP 2024 e malha Natural Earth
+├── docs/                       # Diretrizes da competição e notas metodológicas
+├── notebooks_v2/               # Pipeline analítico modular (Engenharia de Dados e Análises)
+│   ├── _common.py              # Biblioteca compartilhada de funções e estilos
+│   ├── 00_Engenharia_de_Dados.ipynb
+│   ├── 01_Analise_Historica.ipynb
+│   ├── 02_Projeções_e_Incerteza.ipynb
+│   └── _src/                   # Scripts de compilação automatizada
+├── relatorio_v2/               # Relatório executivo, figuras em alta resolução e tabelas
+├── requirements.txt            # Dependências Python para reprodução rápida
+├── environment.yml             # Configuração para ambientes Conda
+├── INSTRUCOES_REPRODUCIBILIDADE.md # Guia passo a passo para a equipe
+└── README.md
+```
 
+## 🚀 Como Executar o Projeto Localmente
+
+Consulte o [Guia de Reprodução Local](INSTRUCOES_REPRODUCIBILIDADE.md) para detalhes completos.
+
+```bash
+# 1. Instalar as dependências
+pip install -r requirements.txt
+
+# 2. Executar e atualizar todos os notebooks e relatórios automaticamente:
+python notebooks_v2/_src/build.py 00 01 02
 ```
 
 ## 📊 Dicionário de Dados Rápido
