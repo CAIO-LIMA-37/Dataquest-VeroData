@@ -1,0 +1,30 @@
+/* SLIDE 1 — imagens/gráficos à esquerda; texto à direita */
+
+#slide-transicao {
+  /* Controla o layout de colunas específico deste slide */
+  .columns.divisoria {
+    display: flex;
+    align-items: stretch;
+  }
+
+  /* Coluna da esquerda (onde estão os gráficos) */
+  .column:first-child {
+    flex-basis: 35% !important;
+    border-right: 2px solid var(--vd-turquesa-vivo) !important;
+    padding-right: 0 !important;
+  }
+
+  /* Coluna da direita (onde está o texto de contexto) */
+  .column:last-child {
+    flex-basis: 65% !important;
+    padding-left: 0.5em !important;
+  }
+
+  /* Reduz e centraliza levemente as imagens dentro deste slide para encaixarem perfeitamente */
+  img, .quarto-figure img {
+    max-height: 330px !important;
+    width: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+  }
+}

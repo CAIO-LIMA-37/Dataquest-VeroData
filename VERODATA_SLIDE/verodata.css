@@ -1,0 +1,169 @@
+/* ============================================================
+   Ver-O-Data · Tema Reveal.js
+   Capa: branca (capa.css) | Slides 2-5: azul marinho | Referências: cinza (referencia.css)
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap");
+
+:root {
+  --vd-marinho: #0B2545;
+  --vd-marinho-2: #13315C;
+  --vd-turquesa: #13A8A8;
+  --vd-turquesa-vivo: #2EC4C4;
+  --vd-coral: #FF6B5E;
+  --vd-azul-claro: #8EC5F0;
+  --vd-texto-escuro: #1F2D3D;
+  --vd-texto-claro: #DCE8F3;
+  --vd-linha: #DCE4EC;
+}
+
+/* ---------- Base ---------- */
+/* Pede ao navegador que NÃO escureça a página (modo escuro forçado) */
+html {
+  color-scheme: only light;
+}
+
+.reveal-viewport,
+.reveal {
+  background-color: #FFFFFF;
+  color: var(--vd-texto-escuro);
+  font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 1.45;
+}
+
+.reveal .slides section {
+  text-align: left;
+}
+
+/* Todos os slides ancorados no topo, com altura fixa de 720px */
+.reveal .slides > section {
+  top: 0 !important;
+  height: 720px;
+  box-sizing: border-box;
+  padding-top: 24px;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: "Source Serif 4", Georgia, serif;
+  color: var(--vd-marinho);
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.reveal h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.2em;
+  border-bottom: 4px solid var(--vd-turquesa);
+  display: inline-block;
+}
+
+.reveal h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--vd-turquesa);
+  margin: 0.3em 0 0.5em;
+}
+
+.reveal ul, .reveal ol {
+  display: block;
+  margin-left: 0.9em;
+}
+
+.reveal li { margin-bottom: 0.45em; }
+.reveal ul li::marker { color: var(--vd-turquesa); font-weight: 700; }
+.reveal strong { font-weight: 700; }
+
+.reveal .slide-number {
+  background: transparent;
+  color: var(--vd-turquesa);
+  font-weight: 700;
+  font-size: 0.6em;
+}
+
+/* ============================================================
+   SLIDES 2 a 5 · FUNDO ESCURO (azul marinho)
+   ============================================================ */
+.reveal .slide-escuro,
+.reveal .slide-escuro p,
+.reveal .slide-escuro li {
+  color: var(--vd-texto-claro);
+}
+
+.reveal .slide-escuro h2 {
+  color: #FFFFFF;
+  border-bottom-color: var(--vd-turquesa-vivo);
+}
+
+.reveal .slide-escuro h3 { color: var(--vd-turquesa-vivo); }
+.reveal .slide-escuro strong { color: #FFFFFF; }
+.reveal .slide-escuro ul li::marker { color: var(--vd-turquesa-vivo); }
+
+.reveal .slide-escuro blockquote {
+  background: rgba(46, 196, 196, 0.10);
+  border-left: 5px solid var(--vd-turquesa-vivo);
+  border-radius: 6px;
+  box-shadow: none;
+  color: #FFFFFF;
+  font-size: 0.9em;
+  margin: 0.4em 0;
+  padding: 0.5em 0.9em;
+  width: 100%;
+}
+
+.reveal .slide-escuro .destaque {
+  background: rgba(255, 107, 94, 0.12);
+  border-left: 5px solid var(--vd-coral);
+  border-radius: 6px;
+  padding: 0.6em 0.9em;
+  font-size: 0.9em;
+  color: #FFFFFF;
+}
+
+/* ---------- Divisão em duas colunas com LINHA VERTICAL ---------- */
+.reveal .slide-escuro .columns,
+.reveal .columns.divisoria {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  min-height: 480px;
+}
+
+.reveal .columns.divisoria > .column:first-child {
+  border-right: 2px solid var(--vd-turquesa-vivo);
+  padding-left: 1.4em;
+}
+
+.reveal .columns.divisoria > .column:last-child {
+  padding-left: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Figuras nos slides escuros ---------- */
+.reveal .slide-escuro img,
+.reveal .slide-escuro .quarto-figure img {
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: none;
+  max-height: 520px;
+  margin: 0;
+}
+
+/* ============================================================
+   Links (todos os slides)
+   ============================================================ */
+.reveal a {
+  color: #3D7EA6;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* A capa está em capa.css e as Referências em referencia.css. */

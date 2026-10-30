@@ -1,0 +1,47 @@
+<!-- ============================================================
+     Rodapé próprio da CAPA (slide 1).
+     ============================================================ -->
+<div id="capa-footer" aria-label="Autores e logo do grupo">
+
+  <div class="capa-footer__autores">
+
+    <div class="capa-footer__autor">
+      <span class="capa-footer__nome">Pedro C. L. Canavieira</span>
+      <span class="capa-footer__email">pedroocaiooz7@gmail.com</span>
+      <span class="capa-footer__github">github.com/CAIO-LIMA-37</span>
+    </div>
+
+    <div class="capa-footer__autor">
+      <span class="capa-footer__nome">Pedro H. A. Souza</span>
+      <span class="capa-footer__email">phadesouza@gmail.com</span>
+      <span class="capa-footer__github">github.com/Dataph</span>
+    </div>
+
+    <div class="capa-footer__autor">
+      <span class="capa-footer__nome">Rodrigo M. T. Graim </span>
+      <span class="capa-footer__email">graimrodrigo@gmail.com</span>
+      <span class="capa-footer__github">github.com/RODMTG</span>
+    </div>
+
+  </div>
+
+  <img class="capa-footer__logo" src="verodata4.png" alt="Logo Ver-O-Data">
+
+</div>
+
+<script>
+  (function () {
+    function moverRodapeParaCapa() {
+      var rodape = document.getElementById("capa-footer");
+      var capa = document.getElementById("title-slide");
+      if (rodape && capa && rodape.parentNode !== capa) {
+        capa.appendChild(rodape);
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", moverRodapeParaCapa);
+    } else {
+      moverRodapeParaCapa();
+    }
+  })();
+</script>

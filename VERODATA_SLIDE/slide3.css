@@ -1,0 +1,100 @@
+/* ============================================================
+   SLIDE 3 · Results and Discussions
+   Imagens em cima | linha horizontal | texto embaixo
+   ============================================================ */
+
+#slide-metodologia {
+  /* ↓↓↓ AJUSTES RÁPIDOS ↓↓↓ */
+  --altura-imagens: 290px;   /* altura da faixa de imagens = POSIÇÃO DA LINHA (maior = linha mais abaixo) */
+  --altura-fig6: 250px;      /* altura da Figura 6 (a da esquerda). Maior = Fig. 6 maior, mas a Fig. 7 perde largura */
+  --altura-fig7: 200px;      /* altura da Figura 7 (a larga). A largura não muda: o que passar da proporção original ESTICA a imagem na vertical */
+  --fonte-texto: 0.53em;     /* tamanho do texto de baixo */
+}
+
+/* Contêiner: duas faixas empilhadas */
+#slide-metodologia .columns.divisoria {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  min-height: 0;
+}
+
+/* ---------- Faixa de cima: imagens ---------- */
+#slide-metodologia .columns.divisoria > .column:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-sizing: border-box;
+  width: 100% !important;
+  height: var(--altura-imagens);
+  flex: 0 0 var(--altura-imagens) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-right: none !important;
+  border-bottom: 2px solid var(--vd-turquesa-vivo) !important;   /* a linha divisória */
+}
+
+/* Os dois blocos que envolvem as imagens */
+#slide-metodologia .columns.divisoria > .column:first-child > * {
+  margin: 0 !important;
+}
+
+/* Figura 6 (esquerda): ocupa a altura toda da faixa; a largura vem da proporção */
+#slide-metodologia .columns.divisoria > .column:first-child > *:first-child {
+  flex: 0 0 auto;
+}
+#slide-metodologia .columns.divisoria > .column:first-child > *:first-child img {
+  height: var(--altura-fig6) !important;
+  width: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* Figura 7 (direita, bem larga): ocupa todo o espaço horizontal que sobrar */
+#slide-metodologia .columns.divisoria > .column:first-child > *:last-child {
+  flex: 1 1 0;
+  min-width: 0;
+}
+#slide-metodologia .columns.divisoria > .column:first-child > *:last-child img {
+  width: 100% !important;
+  height: var(--altura-fig7) !important;   /* altura fixa → deforma (estica) na vertical */
+  max-width: 100% !important;
+  max-height: none !important;
+  object-fit: fill !important;             /* 'fill' preenche a caixa sem manter a proporção */
+}
+
+#slide-metodologia img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* ---------- Faixa de baixo: texto ---------- */
+#slide-metodologia .columns.divisoria > .column:last-child {
+  display: block !important;            /* anula o flex centralizado do verodata.css */
+  width: 100% !important;
+  flex: 1 1 auto !important;
+  margin: 0 !important;
+  padding: 12px 0 0 0 !important;
+}
+
+/* Coluna interna aninhada no .qmd e o ### vazio que ocupava espaço */
+#slide-metodologia .column .column {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
+#slide-metodologia h3:empty {
+  display: none;
+}
+
+/* Texto: sobrescreve o font-size inline (0.60em) do .qmd */
+#slide-metodologia div[style*="font-size"] {
+  font-size: var(--fonte-texto) !important;
+  line-height: 1.4 !important;
+}

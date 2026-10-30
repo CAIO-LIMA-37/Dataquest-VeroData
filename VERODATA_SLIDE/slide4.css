@@ -1,0 +1,31 @@
+/* SLIDE 4 — texto à esquerda; gráfico à direita */
+#slide-discussions {
+  .columns.divisoria {
+    display: flex;
+    align-items: center;
+  }
+  .column:first-child {
+    flex: 0 0 30% !important;
+    min-width: 0;
+    border-right: 2px solid var(--vd-turquesa-vivo) !important;
+    padding-right: 0.5em !important;
+  }
+  .column:last-child {
+    flex: 0 0 70% 0 !important;
+    min-width: 0;
+    padding-left: 0 !important;
+  }
+  .quarto-figure, figure {
+    margin: 0 auto;
+    text-align: center;
+  }
+  img, .quarto-figure img, figure img {
+    display: block;
+    max-width: 100% !important;
+    max-height: 420px !important;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+}

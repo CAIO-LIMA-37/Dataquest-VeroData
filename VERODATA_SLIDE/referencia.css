@@ -1,0 +1,53 @@
+/* ============================================================
+   referencia.css · SLIDE DE REFERÊNCIAS (último slide)
+   ============================================================ */
+
+:root {
+  --ref-fundo: #1E2021;
+  --ref-cartao: #2A2C2E;
+  --ref-texto: #DAD7D2;
+  --ref-titulo: #F2F0EC;
+}
+
+/* Camada de fundo do ÚLTIMO slide (as Referências) */
+.reveal .backgrounds > .slide-background:last-child {
+  background-color: var(--ref-fundo) !important;
+}
+
+#slide-referencias {
+  background: transparent !important;
+  color: var(--ref-texto);
+}
+
+#slide-referencias h2 {
+  color: var(--ref-titulo) !important;
+  border-bottom-color: var(--vd-turquesa-vivo);
+}
+
+#slide-referencias h3 {
+  color: var(--vd-turquesa-vivo) !important;
+}
+
+#slide-referencias .referencias ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+#slide-referencias .referencias li {
+  font-size: 0.62em;
+  line-height: 1.45;
+  padding: 0.55em 0.9em;
+  margin-bottom: 0.55em;
+  color: var(--ref-texto);
+  background: var(--ref-cartao);
+  border-left: 4px solid var(--vd-turquesa);
+  border-radius: 6px;
+}
+
+#slide-referencias .referencias li strong {
+  color: #FFFFFF;
+}
+
+#slide-referencias a {
+  color: var(--vd-azul-claro);
+}

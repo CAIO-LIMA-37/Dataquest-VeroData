@@ -1,0 +1,79 @@
+/* SLIDE 2 — imagens/gráficos à esquerda; texto à direita */
+#slide-dados {
+  .columns.divisoria {
+    display: flex;
+    align-items: stretch;
+    gap: 1.25em;
+  }
+
+  /* Coluna esquerda: galeria de gráficos (agora com maior espaço) */
+  .column:first-child {
+    flex: 0 0 40% 0 !important;
+    min-width: 0;
+    border-right: 2px solid var(--vd-turquesa-vivo) !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Coluna direita: texto analítico */
+  .column:last-child {
+    flex-basis: 60% !important;
+    min-width: 0;
+    padding-left: 0.2em !important;
+    text-align: left !important;
+  }
+
+  /* Zera ou reduz as margens internas das listas e títulos para puxar tudo à esquerda */
+  .column:last-child ul, 
+  .column:last-child ol {
+    margin-left: 0.4em !important;
+    padding-left: 1em !important;
+  }
+
+  .column:last-child h3,
+  .column:last-child p {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  /* Imagens 3 e 5 lado a lado */
+  .galeria-superior {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+  }
+  .galeria-superior .quarto-figure,
+  .galeria-superior figure {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+  }
+
+  /* Imagem 4 centralizada abaixo */
+  .galeria-inferior {
+    width: 72%;
+    display: flex;
+    justify-content: center;
+    margin: 0.8em auto 0;
+  }
+  .galeria-inferior .quarto-figure,
+  .galeria-inferior figure {
+    width: 100%;
+    margin: 0;
+  }
+
+  img, .quarto-figure img, figure img {
+    display: block;
+    width: 100% !important;
+    max-height: 220px !important;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+}
